@@ -8,6 +8,7 @@
 }
 
 body {
+    margin: 0px;
     font-family: 'Fira Code', monospace;
 }
 
@@ -45,6 +46,7 @@ hr {
 }
 
 /** lists **/
+
 .list-non-bullet {
     list-style: none;
 }
@@ -128,6 +130,11 @@ hr {
     padding: 2rem 1rem;
     text-align: center;
     color: white;
+}
+
+.footer .footer-header{
+    font-size: large;
+    font-weight: bold;
 }
 
 .footer .link {
