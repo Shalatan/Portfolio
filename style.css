@@ -2,14 +2,23 @@
 
 
 :root {
-    --primary-color: #7c3aed;
+    --primary-color: #F9AA33;
+    --background-color: #212121;
+    --background-color-dark: #242424;
+
+    --text-grey: #D0CCCA;
+    --text-white: rgba(255, 255, 255, 0.856);
+
+    --secondary-color: #F9AA33;
     --dar-grey: #6B7280;
     --off-white-grey: #E5E7EB;
 }
 
 body {
+    background-color: var(--background-color);
     margin: 0px;
     font-family: 'Fira Code', monospace;
+    color: var(--text-white);
 }
 
 hr {
@@ -58,8 +67,8 @@ hr {
 /** navigation **/
 
 .navigation {
-    background-color: var(--primary-color);
     color: white;
+    box-shadow: -1px 1px var(--primary-color);
     padding: 1rem;
     border-bottom-left-radius: 1rem;
 }
@@ -73,11 +82,12 @@ hr {
 }
 
 .navigation .link {
-    color: white;
+    color: var(--text-grey);
 }
 
 .navigation .link-active {
     font-weight: bold;
+    color: var(--primary-color);
 }
 
 /* header */
@@ -93,14 +103,24 @@ hr {
 }
 
 .hero .hero-heading {
+    color: var(--text-white);
     font-size: 2rem;
     padding-top: 1rem;
-    color: var(--dar-grey);
     text-align: center;
 }
 
-.hero .hero-heading .heading-inverted {
-    color: var(--primary-color);
+.hero .hero-heading .heading-inverted::before {
+    color: var(--secondary-color);
+    animation: headAnim infinite 4s;
+}
+
+@keyframes headAnim {
+    0% {
+        content: "TEXT 1";
+    }
+    50% {
+        content: "TEXT 2";
+    }
 }
 
 /* section */
@@ -115,7 +135,7 @@ hr {
 }
 
 .ow {
-    background-color: var(--off-white-grey);
+    background-color: var(--background-color-dark);
 }
 
 .section-container {
@@ -126,13 +146,12 @@ hr {
 /* footer */
 
 .footer {
-    background-color: var(--primary-color);
     padding: 2rem 1rem;
     text-align: center;
     color: white;
 }
 
-.footer .footer-header{
+.footer .footer-header {
     font-size: large;
     font-weight: bold;
 }
